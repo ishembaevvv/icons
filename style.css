@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 900px;
+    background-color: black;
+}
+
+.icons {
+    width: 400px;
+    height: 100px;
+    list-style: none;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+.icons li {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    margin: 10px;
+}
+
+
+.icons li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border: 3px solid white;
+    border-radius: 15px;
+    transition: all .5s ease-in;
+}
+
+.icons li:hover::before {
+    transform: matrix(0, 1, 1, 0, 0, 0);
+    border-radius: 100%;
+}
+
+.icons .youtube:hover::before {
+    border: 3px solid red;
+}
+
+.icons .instagram:hover::before {
+    border: 3px solid blueviolet;
+}
+
+.icons .whatsapp:hover::before {
+    border: 3px solid green;
+}
+
+.icons .tiktok:hover::before {
+    border: 3px solid aqua;
+}
+
+.icons li a {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+    color: white;
+    transition: all .5s ease-out;
+}
+
+.icons li:hover a ion-icon{
+    transform: scale(1.3);
+    transition: all .5s;
+}
+
+.icons .youtube:hover a .youtube1 {
+    color: red;
+}
+
+.icons .instagram:hover a .instagram1 {
+    color: blueviolet;
+}
+
+.icons .whatsapp:hover a .whatsapp1 {
+    color: green;
+}
+
+.icons .tiktok:hover a .tiktok1 {
+    color: aqua;
+}
+
